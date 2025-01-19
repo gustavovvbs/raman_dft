@@ -228,7 +228,7 @@ def main(molecule_xyz="butano.xyz",
 if __name__ == "__main__":
     # Ajuste aqui conforme desejado (método, base, laser, etc.)
     main(
-        molecule_xyz="butano.xyz",
+        molecule_xyz="geometries/butano.xyz",
         method="BP86",
         basis="def2-SVP",
         jobname="raman_butano",
