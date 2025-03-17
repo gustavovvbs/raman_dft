@@ -190,7 +190,6 @@ def main(molecule_xyz="butano.xyz",
         x_data = df["Raman Shift (cm^-1)"]
         invert_x = False  
     else:
-        # Converte freq_cm pra comprimento de onda espalhado (Stokes)
         lambda_espalhada_nm = converter_cm_inv_para_nm_deslocado(
             freq_cm, laser_wavelength_nm=laser_wavelength_nm, modo="Stokes"
         )
@@ -202,7 +201,6 @@ def main(molecule_xyz="butano.xyz",
         x_data = df["Wavelength (nm)"]
         invert_x = False  # inverter o eixo nm (Stokes)
 
-    # 6) Plota e salva
     plt.figure(figsize=(8, 5))
     plt.title(f"Raman Spectrum: {jobname}")
 
@@ -226,7 +224,6 @@ def main(molecule_xyz="butano.xyz",
 
 
 if __name__ == "__main__":
-    # Ajuste aqui conforme desejado (método, base, laser, etc.)
     main(
         molecule_xyz="geometries/butano.xyz",
         method="BP86",
